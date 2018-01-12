@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/window"
+
     tools:context="com.appproj.vd.vishaldarekarglynk.MainActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -14,13 +16,68 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="70dp"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:id="@+id/tv_header_icon"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/description"
+                android:layout_gravity="start"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/tabicon" />
+
+            <ImageView
+                android:id="@+id/tv_header_chat"
+                android:contentDescription="@string/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_chat_bubble_outline_black_24dp" />
+
+            <ImageView
+                android:id="@+id/tv_header_title"
+                android:layout_width="wrap_content"
+                android:contentDescription="@string/description"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_widgets_black_24dp" />
+
+            <ImageView
+                android:id="@+id/tv_header_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/description"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_face_black_24dp"/>
+
+            <ImageView
+                android:id="@+id/tv_header_widgets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/description"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_search_black_24dp" />
+        </android.support.v7.widget.Toolbar>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
         <android.support.design.widget.TabLayout
             android:id="@+id/tab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:tabTextAppearance="@style/MineCustomTabText"
+            android:textStyle="bold"
+            app:tabSelectedTextColor="@android:color/black"
+
             app:tabMode="scrollable"/>
 
     </android.support.design.widget.AppBarLayout>
